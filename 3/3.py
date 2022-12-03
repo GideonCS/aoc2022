@@ -27,8 +27,7 @@ with open('./input.txt', 'r') as file:
     for lines in lines_gen:
         line1,line2,line3 =lines
         line1,line2,line3 = line1.strip(),line2.strip(),line3.strip()
-        common_chars=list(set(line1)&set(line2)&set(line3))
-        if common_chars:
-            total+=get_priority(common_chars[0])
+        common_char=(set(line1)&set(line2)&set(line3)).pop()
+        total+=get_priority(common_char)
 
 print(f'TOTAL PART 2={total}')
