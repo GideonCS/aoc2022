@@ -12,7 +12,7 @@ stacks = [
 
 # Toggle Part_1 flag for part 1 solution, 1 crate at a time
 def move_crates(
-    crates: list, num_to_move: int, og_stack: int, new_stack: int, part_1=False
+    crates: list, num_to_move: int, og_stack: int, new_stack: int, part_1: bool=False
 ):
     crates_copy = crates[:]
     movingCrates = crates[og_stack][:num_to_move]
